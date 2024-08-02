@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Fee Calculator</title>
+</head>
+<body>
+    <header>
+        <table width="100%" border="1">
+            <tr>
+                <td>
+                    <h1>VLS University</h1>
+                </td>
+                <td align="right">
+                    <nav>
+                        <a href="Landing_Page.html" face='Arial'>Home &nbsp;&nbsp;&nbsp;</a>
+                        <a href="Contact_Page.html">Contact &nbsp;&nbsp;&nbsp;</a>
+                        <a href="Registration_Fee_Calculator_Page.html">Fee Calculator&nbsp;&nbsp;&nbsp;</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <section>
+        <h2>Calculate Your Registration Fee</h2>
+        <form>
+            <table border="1" width="50%">
+                <tr>
+                    <td><label for="participants">Number of Participants:</label></td>
+                    <td><input type="number" id="participants" name="participants" min="1" required></td>
+                </tr>
+                <tr>
+                    <td><label for="event-type">Type of Event:</label></td>
+                    <td>
+                        <select id="event-type" name="event-type" required>
+                            <option value="">Select</option>
+                            <option value="ai_innovations_expo">AI Innovations Expo (₹50/participant)</option>
+                            <option value="robotics_challenge">Robotics Challenge (₹30/participant)</option>
+                            <option value="cybersecurity_summit">Cybersecurity Summit (₹100/participant)</option>
+                            <option value="quantum_computing_conference">Quantum Computing Conference (₹75/participant)</option>
+                            <option value="sustainable_tech_symposium">Sustainable Tech Symposium (₹40/participant)</option>
+                            <option value="tech_entrepreneurship_forum">Tech Entrepreneurship Forum (₹60/participant)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Fee:</td>
+                    <td><output id="total-fee" name="total-fee"></output></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 University Technical Event</p>
+    </footer>
+    <script>
+        const participantsInput = document.getElementById('participants');
+        const eventTypeInput = document.getElementById('event-type');
+        const totalFeeOutput = document.getElementById('total-fee');
+
+        const fees = {
+            ai_innovations_expo: 50,
+            robotics_challenge: 30,
+            cybersecurity_summit: 100,
+            quantum_computing_conference: 75,
+            sustainable_tech_symposium: 40,
+            tech_entrepreneurship_forum: 60
+        };
+
+        function calculateFee() {
+            const participants = participantsInput.value;
+            const eventType = eventTypeInput.value;
+            const feePerParticipant = fees[eventType] || 0;
+            const totalFee = participants * feePerParticipant;
+            totalFeeOutput.value = totalFee ? `₹${totalFee}` : '';
+        }
+
+        participantsInput.addEventListener('input', calculateFee);
+        eventTypeInput.addEventListener('input', calculateFee);
+    </script>
+</body>
+</html>

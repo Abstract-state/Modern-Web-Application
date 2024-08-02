@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+</head>
+<body>
+    <header>
+        <table width="100%" border="1">
+            <tr>
+                <td>
+                    <h1>VLS University</h1>
+                </td>
+                <td align="right">
+                    <nav>
+                        <a href="Landing_Page.html" face='Arial'>Home &nbsp;&nbsp;&nbsp;</a>
+                        <a href="Contact_Page.html">Contact &nbsp;&nbsp;&nbsp;</a>
+                        <a href="Registration_Fee_Calculator_Page.html">Fee Calculator&nbsp;&nbsp;&nbsp;</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <section>
+        <table border="2" width="100%">
+            <th align="left">
+                
+            <form action="Registration_Detail_Output_Page.html">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="">Select</option>
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="mech">Mechanical</option>
+                    <option value="civil">Civil</option>
+                </select><br><br>
+                <label>Type of Participant:</label>
+                <input type="radio" id="student" name="participant" value="student" required>
+                <label for="student">Student</label>
+                <input type="radio" id="faculty" name="participant" value="faculty" required>
+                <label for="faculty">Faculty</label><br><br>
+                <label for="terms">Agree to terms and conditions</label>
+                <input type="checkbox" id="terms" name="terms" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </th>
+        </table>
+        
+    </section>
+    <footer>
+        <p>&copy; 2024 University Technical Event</p>
+    </footer>
+</body>
+</html>
