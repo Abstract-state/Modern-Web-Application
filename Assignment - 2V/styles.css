@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/originals/6d/1a/15/6d1a154d74d4e7c888aa8a0e49252695.gif');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the header stays on top of the page */
+header {
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0.5;
+    padding: 5px;
+    text-align: center;
+    color: #131313;
+    flex-shrink: 0;
+    color: white;
+}
+
+h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    /* Space around the container */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Transition for hover effects */
+    flex-grow: 1;
+}
+
+/* Hover Effect on Container (applies to form as well) */
+.container:hover {
+    transform: scale(1.02);
+    /* Slightly increase the size of the form on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    /* Stronger shadow on hover */
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Styling for the select dropdown */
+select.input-field {
+    background-color: #252525; /* Dark background to match the form */
+    color: #d3d3d3; /* Light text color for readability */
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    outline: none;
+}
+
+/* Styling for the dropdown options */
+select.input-field option {
+    background-color: #171717; /* Darker background for options */
+    color: #fff; /* White text for high contrast */
+}
+
+/* Hover effect for options in the dropdown */
+select.input-field option:hover {
+    background-color: #444444; /* Slightly lighter background on hover */
+    color: #ffffff; /* Ensure text stays white on hover */
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Form Styling */
+form {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transition for hover effects */
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2em;
+    background-color: #171717;
+}
+
+/* Card Styling */
+.card {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    transition: all 0.3s;
+}
+
+.card2 {
+    transition: all 0.2s;
+}
+
+.card2:hover {
+    transform: scale(0.98);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+/* Heading in Form */
+#heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-family: 'Bangers', cursive;
+}
+
+/* Input Fields Styling */
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 0.8em;
+    background-color: #252525;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #ccc;
+}
+
+.input-icon {
+    height: 1.5em;
+    width: 1.5em;
+    fill: white;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: 1em;
+}
+
+/* Buttons */
+/* Buttons */
+.form .btn {
+    display: flex;
+    justify-content: center; /* Center the button */
+    align-items: center; /* Center the button vertically (if needed) */
+    width: 100%; /* Ensure the container takes the full width */
+    margin-top: 2.5em;
+}
+
+/* Button Styling */
+.styled-button {
+    position: relative;
+    padding: 0.5rem 1.5rem; /* Adjust padding for better visual balance */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #171717, #242424);
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1), 0 10px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #292929;
+    text-align: center; /* Ensure text is centered within the button */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+
+.styled-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: linear-gradient(to bottom, #292929, #000000);
+  z-index: -1;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+
+.styled-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1), 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.styled-button .inner-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #171717, #242424);
+  width: 40px; /* Keeping the same width for the inner button */
+  height: 40px; /* Keeping the same height */
+  margin-left: 8px; /* Reduced margin for narrower spacing */
+  border-radius: 50%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+  border: 1px solid #252525;
+  transition: all 0.2s ease;
+}
+
+.styled-button .inner-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: linear-gradient(to bottom, #292929, #000000);
+  z-index: -1;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+
+.styled-button .inner-button .icon {
+  filter: drop-shadow(0 10px 20px rgba(26, 25, 25, 0.9))
+    drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+  transition: all 0.4s ease-in-out;
+}
+
+.styled-button .inner-button .icon:hover {
+  filter: drop-shadow(0 10px 20px rgba(50, 50, 50, 1))
+    drop-shadow(0 0 20px rgba(2, 2, 2, 1));
+  transform: rotate(-360deg);
+}
+
+/* Benefits Section */
+.benefits {
+    margin: 20px 0;
+    font-weight: bold;
+    background-color: #000000;
+    padding: 10px;
+    display: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* Shine Effect for Benefits */
+.btn-shine {
+  display: none;
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0%, #fff 10%, #868686 20%);
+  background-size: 300%;
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  60% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* Confirmation Message Styling */
+.confirmation-message {
+    display: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}

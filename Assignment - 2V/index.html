@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration - Music Festival</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h3>Music Festival Volunteer Registration</h3>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="card2">
+                <form id="registrationForm">
+                    <p id="heading">Volunteer Registration</p>
+
+                    <!-- Name Field -->
+                    <div class="field">
+                        <input type="text" id="name" name="name" class="input-field" placeholder="Name" required />
+                    </div>
+
+                    <!-- Age Field -->
+                    <div class="field">
+                        <input type="number" id="age" name="age" class="input-field" placeholder="Age" required />
+                    </div>
+
+                    <!-- Contact Field -->
+                    <div class="field">
+                        <input type="text" id="contact" name="contact" class="input-field" placeholder="Contact Details" required />
+                    </div>
+
+                    <!-- Role Field -->
+                    <div class="field">
+                        <select id="role" name="role" class="input-field" required>
+                            <option value="">Preferred Role</option>
+                            <option value="setup">Setup Crew</option>
+                            <option value="foodservice">Food Service</option>
+                            <option value="stageassist">Stage Assistant</option>
+                            <option value="cleaning">Cleaning</option>
+                        </select>
+                    </div>
+
+                    <!-- T-shirt Size Field -->
+                    <div class="field">
+                        <select id="tshirt" name="tshirt" class="input-field" required>
+                            <option value="">T-shirt Size</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="xlarge">X-Large</option>
+                        </select>
+                    </div>
+
+                    <!-- Benefits Section -->
+                    <div id="benefits" class="btn-shine">
+                        <!-- Dynamic benefits will be inserted here -->
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="btn" align="center">
+                        <button class="styled-button" type="submit">
+                            Register Now
+                            <div class="inner-button">
+                                <svg
+                                    id="Arrow"
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="30px"
+                                    width="30px"
+                                    class="icon"
+                                >
+                                    <defs>
+                                        <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="iconGradient">
+                                            <stop style="stop-color:#FFFFFF;stop-opacity:1" offset="0%"></stop>
+                                            <stop style="stop-color:#AAAAAA;stop-opacity:1" offset="100%"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <path
+                                        fill="url(#iconGradient)"
+                                        d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Confirmation Message -->
+                    <div class="confirmation-message" id="confirmationMessage">
+                        <!-- Confirmation text will be inserted here after submission -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Music Festival. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
