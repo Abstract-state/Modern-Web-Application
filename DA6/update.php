@@ -75,6 +75,7 @@ include 'db_connect.php';
             $license_number = $_POST['license_number'];
             $phone_number = $_POST['phone_number'];
             $vehicle_type = $_POST['vehicle_type'];
+            $experience_level = $_POST['experience_level']; // Added this line
 
             $stmt = $conn->prepare("UPDATE drivers SET driver_id=?, name=?, license_number=?, phone_number=?, vehicle_type=?, experience_level=? WHERE id=?");
             $stmt->bind_param("isssssi", $driver_id, $name, $license_number, $phone_number, $vehicle_type, $experience_level, $id);
