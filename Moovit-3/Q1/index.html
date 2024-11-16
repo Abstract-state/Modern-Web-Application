@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility and EMI Calculator</title>
+</head>
+<body>
+
+    <h1>Loan Eligibility Checker</h1>
+    <br>
+    <div>
+        <label>Annual Income (Rs.):</label>
+        <input id="annualIncome" type="number">
+    </div>
+    <br>
+    <div>
+        <label>Credit Score:</label>
+        <input id="creditScore" type="number">
+    </div>
+    <br>
+    <div>
+        <label>Age:</label>
+        <input id="age" type="number">
+    </div>
+    <br>
+    <div>
+        <label>Monthly Salary (Rs.):</label>
+        <input id="monthlySalary" type="number">
+    </div>
+    <br>
+    <div>
+        <label>Current EMI (Rs.):</label>
+        <input id="currentEmi" type="number">
+    </div>
+    <br>
+    <button onclick="calculateEligibility()">Check Eligibility</button>
+    <br>
+    <p id="output"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

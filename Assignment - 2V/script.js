@@ -36,13 +36,13 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         benefitsMessage = 'Free T-shirt, Meal Vouchers, and a Festival Pass.';
     }
 
-    // Disable the form fields to prevent further input
+    
     const formElements = document.getElementById('registrationForm').elements;
     for (let i = 0; i < formElements.length; i++) {
         formElements[i].disabled = true;
     }
 
-    // Show confirmation message
+    
     const confirmationMessage = document.getElementById('confirmationMessage');
     confirmationMessage.style.display = 'block';
     confirmationMessage.textContent = `Thank you, ${name}! Your assigned role is: ${role}. You will receive ${benefitsMessage}. Please pick up your T-shirt size (${tshirt}) at the registration desk.`;
