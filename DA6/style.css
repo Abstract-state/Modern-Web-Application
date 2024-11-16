@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.logo {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+form div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+form label {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    flex: 1;
+    padding: 8px;
+}
+
+form input[type="radio"] {
+    margin-left: 10px;
+}
+
+form input[type="submit"] {
+    margin-left: 160px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #aaa;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.actions a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    border-radius: 3px;
+}
+
+.actions a.update {
+    background-color: #28a745;
+}
+
+.actions a.delete {
+    background-color: #dc3545;
+}
+
+.actions a:hover {
+    opacity: 0.8;
+}
+
+.message {
+    text-align: center;
+    color: green;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .logo, nav {
+        margin: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    form div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    form input[type="submit"] {
+        margin-left: 0;
+    }
+}
