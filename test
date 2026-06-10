@@ -1,0 +1,42 @@
+With(
+    {
+        selTradingBooks: TradingBook_Box.SelectedItems,
+        selTraders: Trader_Box.SelectedItems,
+        selAlertDates: AlertDate_Box.SelectedItems
+    },
+    Filter(
+        'LeaningAlerts' As AlertRow,
+
+        (
+            CountRows(selTradingBooks) = 0
+            ||
+            !IsEmpty(
+                Filter(
+                    'LeaningEpisodePropDetails',
+                    tsds_alertid = AlertRow.tsds_alertid
+                    &&
+                    TradingBook in selTradingBooks.Value
+                )
+            )
+        )
+        &&
+        (
+            CountRows(selTraders) = 0
+            ||
+            !IsEmpty(
+                Filter(
+                    'LeaningEpisodePropDetails',
+                    tsds_alertid = AlertRow.tsds_alertid
+                    &&
+                    Trader in selTraders.Value
+                )
+            )
+        )
+        &&
+        (
+            CountRows(selAlertDates) = 0
+            ||
+            DateValue(AlertRow.CreatedDT) in selAlertDates.Value
+        )
+    )
+)
